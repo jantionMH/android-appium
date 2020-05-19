@@ -1,0 +1,11 @@
+appium desktop 1.71
+坑点一  : press VS long_press
+    
+    使用录制脚本功能时，想实现滑动屏幕的操作，生成的代码：TouchAction(driver).press(x=309,y=923).move_to(x=320,y=301).release().perform(),实测无效。百思不得其解，内心慌的一批（手动滑稽）
+	  最后发现有个叫long_press的方法，appium客户端，我是乡下来的别欺负我读书少好吗？
+
+解决问题 附上python代码
+
+from appium.webdriver.common.touch_action import TouchAction
+
+TouchAction(driver).long_press(x=309,y=923).move_to(x=320,y=301).release().perform()
