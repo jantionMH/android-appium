@@ -9,3 +9,12 @@ appium desktop 1.71
 from appium.webdriver.common.touch_action import TouchAction
 
 TouchAction(driver).long_press(x=309,y=923).move_to(x=320,y=301).release().perform()
+
+
+如何输入大写，keycode
+self.driver.presskeycode('34',metastate=1)
+对照表，想输入什么按对应的数字就好
+{'0': 7, '1': 8, '2': 9, '3': 10, '4': 11, '5': 12, '6': 13, '7': 14, '8': 15, '9': 16,
+               'A': 29, 'B': 30, 'C': 31, 'D': 32, 'E': 33, 'F': 34, 'G': 35, 'H': 36, 'I': 37, 'J': 38,
+               'K': 39, 'L': 40, 'M': 41, 'N': 42, 'O': 43, 'P': 44, 'Q': 45, 'R': 46, 'S': 47, 'T': 48,
+               'U': 49, 'V': 50, 'W': 51, 'X': 52, 'Y': 53, 'Z': 54}
